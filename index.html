@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="res/css/style.css">
+    <title>OS Kodutöö 1</title>
+</head>
+
+<body>
+    <div id="applicationWindow">
+        <div>
+            <h1>
+                Esimene kodutöö - Protsessoriaja haldus
+            </h1>
+            <div id="author">
+                <p>
+                    Karl Rapur <br> 2.a Informaatika <br> OS LTAT.06.001<br> Versioon: 13/10/2020<br>
+                </p>
+            </div>
+        </div>
+        <div id="options">
+            <p>Vali või sisesta järjend (kujul 1,10;4,2;12,3;13,2)</p>
+
+            <input type="radio" name="option" id="first" checked=True>
+            <label for="first">Esimene</label>
+            <p class="optionValueText" id="firstValue">0,7;1,5;2,3;3,1;4,2;5,1</p><br>
+
+            <input type="radio" name="option" id="second">
+            <label for="second">Teine</label>
+            <p class="optionValueText" id="secondValue">0,2;0,4;12,4;15,5;21,10</p><br>
+
+            <input type="radio" name="option" id="third">
+            <label for="third">Kolmas</label>
+            <p class="optionValueText" id="thirdValue">0,4;1,5;2,2;3,1;4,6;6,3</p><br>
+
+            <input type="radio" name="option" id="custom">
+            <label for="custom">Enda oma</label>
+            <input type="text" name="customEntry" id="customValue" placeholder="1,10;3,3;4,1;8,6;15,2"><br>
+
+        </div>
+        <div>
+            <p>Algoritmi käivtamiseks klõpsa nupule</p>
+            <input type="button" value="FCFS" id="fcfsButton">
+            <input type="button" value="SRTF" id="srtfButton">
+            <input type="button" value="RR3" id="rr3Button">
+            <input type="button" value="2xFCFS" id="x2fcfsButton">
+            <input type="button" value="Puhasta väljund" id="clearOutput">
+        </div>
+        <div>
+            <p id="averageTime">-</p>
+
+            <div id="box" class="box">
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <p id="question">
+            <strong>Kas kuidagi saaks keskmist ooteaega veel väiksemaks kui ükski neist neljast algoritmist sai? Kui jah, siis näiteks kuidas? Kui ei, siis miks?</strong> <br> <br> Üldisespildis EI. Nagu antud harjutuses näeme, siis ainuüksi algoritmist
+            ei piisa. Väga tähtsal kohal on etteantavad protsessid. Näiteks FCFS töötab kiiresti lühikeste protsessidega, samas SRTF on parem samaegselt sisenevate protsessidega. RR3 on vahepealne variant mõlemast. Kõik algoritmid on head, aga keskmine
+            ooteaeg sõltub protsessori koormatusest. Seega kui me teame protsesse ette, siis oskame valida parima algoritmi, aga konkreetset parimat ei leidu.
+        </p>
+    </div>
+    <script src="res/js/GeneralLogic.js"></script>
+    <script src="res/js/DOM.js"></script>
+    <script src="res/js/Process.js"></script>
+    <script src="res/js/Algorithms.js"></script>
+
+
+</body>
+
+</html>
